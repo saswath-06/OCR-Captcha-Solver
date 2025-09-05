@@ -1,0 +1,35 @@
+name: Deploy OCR Captcha API
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        cd api
+        pip install -r requirements.txt
+        
+    - name: Test API locally
+      run: |
+        cd api
+        python -c "import main; print('API imports successfully')"
+        
+    - name: Deploy to Railway
+      if: github.ref == 'refs/heads/main'
+      uses: railway-app/railway-deploy@v1
+      with:
+        railway-token: ${{ secrets.RAILWAY_TOKEN }}
+        service: ${{ secrets.RAILWAY_SERVICE_ID }}

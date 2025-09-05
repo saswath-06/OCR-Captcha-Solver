@@ -1,0 +1,51 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --muted: #94a3b8;
+  --text: #e2e8f0;
+  --primary: #22c55e;
+  --danger: #ef4444;
+  --accent: #38bdf8;
+  --border: #1f2937;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+h1 { margin: 0 0 8px; font-weight: 700; font-size: 28px; }
+.sub { margin: 0 0 24px; color: var(--muted); }
+
+.card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+
+label.file-label { display: inline-block; margin-bottom: 8px; color: var(--text); font-weight: 600; }
+input[type="file"] { width: 100%; color: var(--text); background: transparent; border: 1px dashed var(--border); padding: 10px; border-radius: 8px; }
+.hint { color: var(--muted); margin: 8px 0 0; }
+
+.drop-zone { margin-top: 12px; border: 2px dashed var(--border); border-radius: 12px; padding: 24px; text-align: center; color: var(--muted); }
+
+.actions { margin-top: 16px; display: flex; gap: 8px; }
+button { background: var(--primary); color: #00100a; border: none; padding: 10px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.preview { min-height: 140px; display: grid; place-items: center; border: 1px dashed var(--border); border-radius: 12px; padding: 8px; }
+.preview img { max-width: 100%; max-height: 200px; display: block; border-radius: 8px; }
+
+.result { min-height: 60px; display: grid; place-items: center; border: 1px dashed var(--border); border-radius: 12px; padding: 8px; }
+.muted { color: var(--muted); margin: 0; }
+.note { margin-top: 8px; color: var(--muted); font-size: 12px; }
+
+.error { margin-top: 8px; background: #1f2937; color: var(--danger); border: 1px solid #374151; padding: 8px; border-radius: 8px; }
+
+.spinner { width: 28px; height: 28px; border: 3px solid #334155; border-top-color: var(--accent); border-radius: 50%; animation: spin 1s linear infinite; margin: 8px auto; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.footer { margin-top: 24px; color: var(--muted); text-align: center; }
+
+@media (max-width: 720px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+
+

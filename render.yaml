@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ocr-captcha-api
+    env: docker
+    dockerfilePath: ./Dockerfile.api
+    dockerContext: .
+    plan: starter
+    region: oregon
+    envVars:
+      - key: MODEL_RUN_PATH
+        value: /app/model
+    healthCheckPath: /health
+    autoDeploy: false
