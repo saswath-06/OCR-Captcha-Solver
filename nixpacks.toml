@@ -1,6 +1,24 @@
 [phases.setup]
 nixPkgs = ["python39", "python39Packages.pip"]
-aptPkgs = ["libgl1-mesa-dri", "libglib2.0-0", "libsm6", "libxext6", "libxrender-dev", "libgomp1", "libgthread-2.0-0"]
+aptPkgs = [
+  "libgl1-mesa-dev", 
+  "libgl1-mesa-glx", 
+  "libglx-mesa0", 
+  "libglib2.0-0", 
+  "libsm6", 
+  "libxext6", 
+  "libxrender-dev", 
+  "libgomp1", 
+  "libgthread-2.0-0",
+  "libegl1-mesa",
+  "libxrandr2",
+  "libxss1",
+  "libxcursor1",
+  "libxcomposite1",
+  "libasound2",
+  "libxi6",
+  "libxtst6"
+]
 
 [phases.install]
 cmd = "pip install -r requirements.txt"
