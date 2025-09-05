@@ -1,6 +1,6 @@
 [build]
 builder = "nixpacks"
-buildCommand = "pip install -r api/requirements.txt"
+buildCommand = "pip install -r requirements.txt"
 
 [build.env]
 NIXPACKS_PYTHON_VERSION = "3.9.13"
