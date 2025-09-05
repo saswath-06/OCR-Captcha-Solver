@@ -6,7 +6,6 @@ buildCommand = "pip install -r requirements.txt"
 NIXPACKS_PYTHON_VERSION = "3.9.13"
 
 [deploy]
-startCommand = "uvicorn main:app --host 0.0.0.0 --port $PORT"
-workDir = "api"
+startCommand = "cd api && uvicorn main:app --host 0.0.0.0 --port $PORT"
 healthcheckPath = "/health"  # optional
 restartPolicyType = "on_failure"
