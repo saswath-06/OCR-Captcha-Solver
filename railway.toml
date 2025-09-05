@@ -2,11 +2,11 @@
 builder = "nixpacks"
 buildCommand = "pip install -r api/requirements.txt"
 
+[build.env]
+NIXPACKS_PYTHON_VERSION = "3.9.13"
+
 [deploy]
 startCommand = "uvicorn main:app --host 0.0.0.0 --port $PORT"
 workDir = "api"
 healthcheckPath = "/health"  # optional
 restartPolicyType = "on_failure"
-
-[build.env]
-NIXPACKS_PYTHON_VERSION = "3.9"
