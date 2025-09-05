@@ -62,7 +62,7 @@ export default function Home() {
       const file = fileRef.current.files[0];
       const fd = new FormData();
       fd.append('file', file);
-      const baseUrl = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000';
+      const baseUrl = process.env.NEXT_PUBLIC_API_BASE || 'ocr-detection.up.railway.app';
       const res = await fetch(`${baseUrl}/api/predict`, { method: 'POST', body: fd });
       if (!res.ok) {
         const msg = await safeError(res);
