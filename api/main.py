@@ -29,8 +29,8 @@ app = FastAPI(title="OCR Captcha Solver API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ocr-captcha-solver.vercel.app","http://localhost:3000"],
-    allow_credentials=True,
+    allow_origins=["*"],  # Allow all origins for now
+    allow_credentials=False,  # Must be False when allow_origins is "*"
     allow_methods=["*"],
     allow_headers=["*"],
 )

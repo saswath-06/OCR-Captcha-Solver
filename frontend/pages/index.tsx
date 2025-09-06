@@ -64,6 +64,8 @@ export default function Home() {
       fd.append('file', file);
       const baseUrl = process.env.NEXT_PUBLIC_API_BASE || 'https://ocr-detection.up.railway.app';
       const apiUrl = `${baseUrl}/api/predict`;
+      console.log('Environment variable NEXT_PUBLIC_API_BASE:', process.env.NEXT_PUBLIC_API_BASE);
+      console.log('Base URL:', baseUrl);
       console.log('Making request to:', apiUrl);
       const res = await fetch(apiUrl, { method: 'POST', body: fd });
       if (!res.ok) {
