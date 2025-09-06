@@ -258,15 +258,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 📧 **Email**: [your-email@example.com](mailto:your-email@example.com)
-- 💬 **Discord**: [Join our community](https://discord.gg/your-server)
+- 📧 **Email**: [s2yeshwa@uwaterloo.ca](mailto:s2yeshwa@uwaterloo.ca)
 - 🐛 **Issues**: [GitHub Issues](https://github.com/saswath-06/OCR-Captcha-Solver/issues)
-- 📖 **Documentation**: [Project Wiki](https://github.com/saswath-06/OCR-Captcha-Solver/wiki)
 
 ---
 
-**Website** • **Documentation** • **Discord** • **Twitter**
-
-Made with ❤️ by the OCR Captcha Solver team
-
-# Force rebuild Sat Sep 06 17:25:00 EDT 2025
+Made with ❤️
