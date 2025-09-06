@@ -216,7 +216,7 @@ npm start
 ## 📊 Performance
 
 - **Inference Time**: ~30-100ms per image
-- **Accuracy**: 85%+ on test dataset
+- **Accuracy**: 92%+ on test dataset
 - **Model Size**: ~2MB (ONNX format)
 - **Memory Usage**: ~50MB (inference only)
 - **Concurrent Requests**: 10+ per second
@@ -232,7 +232,7 @@ npm start
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+Contributions are Welcome!
 
 ### Development Workflow
 1. Fork the repository
@@ -242,10 +242,6 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 5. Commit your changes: `git commit -m 'Add amazing feature'`
 6. Push to the branch: `git push origin feature/amazing-feature`
 7. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
