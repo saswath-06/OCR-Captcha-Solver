@@ -62,8 +62,10 @@ export default function Home() {
       const file = fileRef.current.files[0];
       const fd = new FormData();
       fd.append('file', file);
-      const baseUrl = process.env.NEXT_PUBLIC_API_BASE || 'https://ocr-detection.up.railway.app' || 'http://localhost:8000';
-      const res = await fetch(`${baseUrl}/api/predict`, { method: 'POST', body: fd });
+      const baseUrl = process.env.NEXT_PUBLIC_API_BASE || 'https://ocr-detection.up.railway.app';
+      const apiUrl = `${baseUrl}/api/predict`;
+      console.log('Making request to:', apiUrl);
+      const res = await fetch(apiUrl, { method: 'POST', body: fd });
       if (!res.ok) {
         const msg = await safeError(res);
         throw new Error(msg || `Request failed with ${res.status}`);
