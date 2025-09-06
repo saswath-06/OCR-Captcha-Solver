@@ -62,7 +62,7 @@ export default function Home() {
       const file = fileRef.current.files[0];
       const fd = new FormData();
       fd.append('file', file);
-      const baseUrl = process.env.NEXT_PUBLIC_API_BASE || 'ocr-detection.up.railway.app';
+      const baseUrl = process.env.NEXT_PUBLIC_API_BASE || 'https://ocr-detection.up.railway.app' || 'http://localhost:8000';
       const res = await fetch(`${baseUrl}/api/predict`, { method: 'POST', body: fd });
       if (!res.ok) {
         const msg = await safeError(res);
@@ -86,6 +86,7 @@ export default function Home() {
       <Head>
         <title>OCR Captcha Solver</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔍</text></svg>" />
       </Head>
       <main className="container">
         <h1>OCR Captcha Solver</h1>
